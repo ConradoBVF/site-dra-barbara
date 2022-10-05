@@ -1,0 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    position: fixed;
+}
+
+header img{
+    width: 15vw;
+}
+
+header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh;
+    align-items: center;
+}
+
+header li{
+    text-align: center;
+    height: 10vh;
+    width: 80%;
+}
+
+header>nav>ul>li>a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #704796;
+    line-height: 10vh;
+    border: 2px solid #704796;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+header>nav>ul>li>a:hover{
+    color: #d9d9d9;
+    background-color: #704796;
+}
+
+.main{
+    margin-left: 15vw;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #EBEBEB;
+}
+
+.main img{
+    width: 30vw;
+    border-radius: 100%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article h2{
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #704796;
+    margin: 10px 0;
+}
+
+article p{
+    padding: 0 5vw;
+    margin: 10px 0;
+    color: #704796;
+    font-weight: bold;
+}
+
+article a{
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    background-color:#704796;
+    color: white;
+    border-radius: 20px;
+}
+
+article a:hover{
+    background-color: #EBEBEB;
+    color: #704796;
+}
+
+article li{
+    text-align: left;
+    color: #704796;
+    font-weight: bold;
+}
+
+#depoimentos{
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    width: 25vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-weight: bold;
+    color: #704796;
+}
+
+footer{
+    margin-left: 15vw;
+    margin-right: 25vw;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+
+footer h2, footer p{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #704796;
+}
+
+.contatos{
+    width: 100%;
+    text-align: center;
+}
+
+.contatos ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contatos img{
+    width: 3vw;
+}
+
+.contatos img:hover{
+    transform: rotate(-30deg);
+}
+
+/* ___________________________________________________________________________________________________________________________________________ */
+@media (max-width: 1085px) { 
+    header{
+        display: none;
+    }
+    .main{
+        margin-left: 0;
+        width: 75vw;
+    }
+    footer{
+        margin-left: 0;
+        width: 75vw;
+    }
+    .contatos img{
+        width: 10vw;
+    }
+}
+
+@media (max-width: 700px) { 
+    .main{
+        width: 100vw;
+    }
+    #depoimentos{
+        width: 100vw;
+        position: static;
+    }
+    footer{
+        width: 100vw;
+    }
+}
